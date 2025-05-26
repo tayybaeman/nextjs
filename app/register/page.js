@@ -105,12 +105,12 @@ export default function Register() {
         uid: userCredential.user.uid
       });
 
-      alert('Registration successful! Redirecting to login...');
+      /*alert('Registration successful! Redirecting to login...');
       
       // Redirect after a short delay
       setTimeout(() => {
         router.push('/login');
-      }, 1000);
+      }, 1000);*/
       
     } catch (error) {
       console.error('Registration error:', error);
@@ -144,23 +144,23 @@ export default function Register() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4 py-12">
-      <div className="w-full max-w-md bg-slate-800 p-8 rounded-2xl shadow-lg">
-        <div className="mb-8 text-center">
-          <h3 className="text-white text-3xl font-light mb-2">REGISTER</h3>
-          <p className="text-slate-400">Create your account to get started</p>
+    <div className="min-h-screen bg-slate-900 flex items-center justify-center px-4 py-4">
+      <div className="w-full max-w-md bg-slate-800 p-6 rounded-2xl shadow-lg">
+        <div className="mb-6 text-center">
+          <h3 className="text-white text-2xl font-light mb-1">REGISTER</h3>
+          <p className="text-slate-400 text-sm">Create your account to get started</p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid grid-cols-2 gap-4">
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="grid grid-cols-2 gap-3">
             <input 
               type="text" 
               name="firstName" 
               placeholder="First Name" 
               value={formData.firstName} 
               onChange={handleChange} 
-              className="w-full bg-slate-700 border border-slate-600 rounded-lg py-3 px-4 text-white placeholder-slate-400 focus:outline-none focus:border-teal-400 focus:bg-slate-600" 
-              required 
+              className="w-full bg-slate-700 border border-slate-600 rounded-lg py-2.5 px-3 text-white placeholder-slate-400 focus:outline-none focus:border-teal-400 focus:bg-slate-600 text-sm" 
+              required
             />
             <input 
               type="text" 
@@ -168,8 +168,8 @@ export default function Register() {
               placeholder="Last Name" 
               value={formData.lastName} 
               onChange={handleChange} 
-              className="w-full bg-slate-700 border border-slate-600 rounded-lg py-3 px-4 text-white placeholder-slate-400 focus:outline-none focus:border-teal-400 focus:bg-slate-600" 
-              required 
+              className="w-full bg-slate-700 border border-slate-600 rounded-lg py-2.5 px-3 text-white placeholder-slate-400 focus:outline-none focus:border-teal-400 focus:bg-slate-600 text-sm" 
+              required
             />
           </div>
 
@@ -179,7 +179,7 @@ export default function Register() {
             placeholder="Email Address" 
             value={formData.email} 
             onChange={handleChange} 
-            className="w-full bg-slate-700 border border-slate-600 rounded-lg py-3 px-4 text-white placeholder-slate-400 focus:outline-none focus:border-teal-400 focus:bg-slate-600" 
+            className="w-full bg-slate-700 border border-slate-600 rounded-lg py-2.5 px-3 text-white placeholder-slate-400 focus:outline-none focus:border-teal-400 focus:bg-slate-600 text-sm" 
             required 
           />
 
@@ -189,7 +189,7 @@ export default function Register() {
             placeholder="Password" 
             value={formData.password} 
             onChange={handleChange} 
-            className="w-full bg-slate-700 border border-slate-600 rounded-lg py-3 px-4 text-white placeholder-slate-400 focus:outline-none focus:border-teal-400 focus:bg-slate-600" 
+            className="w-full bg-slate-700 border border-slate-600 rounded-lg py-2.5 px-2 text-white placeholder-slate-400 focus:outline-none focus:border-teal-400 focus:bg-slate-600 text-sm" 
             required 
           />
 
@@ -199,16 +199,16 @@ export default function Register() {
             placeholder="Confirm Password" 
             value={formData.confirmPassword} 
             onChange={handleChange} 
-            className="w-full bg-slate-700 border border-slate-600 rounded-lg py-3 px-4 text-white placeholder-slate-400 focus:outline-none focus:border-teal-400 focus:bg-slate-600" 
+            className="w-full bg-slate-700 border border-slate-600 rounded-lg py-2.5 px-3 text-white placeholder-slate-400 focus:outline-none focus:border-teal-400 focus:bg-slate-600 text-sm" 
             required 
           />
 
-          <div className="space-y-3">
+          <div className="space-y-2">
             <div className="flex items-center space-x-3">
               <div 
                 onClick={generateCaptcha} 
                 title="Click to refresh captcha" 
-                className="px-4 py-3 bg-teal-500 text-slate-900 rounded-lg font-mono font-bold text-lg tracking-wider cursor-pointer hover:bg-teal-400 select-none"
+                className="px-3 py-2.5 bg-teal-500 text-slate-900 rounded-lg font-mono font-bold text-lg tracking-wider cursor-pointer hover:bg-teal-400 select-none"
               >
                 {captchaCode}
               </div>
@@ -218,7 +218,7 @@ export default function Register() {
                 placeholder="Enter captcha" 
                 value={formData.captcha} 
                 onChange={handleChange} 
-                className="flex-1 bg-slate-700 border border-slate-600 rounded-lg py-3 px-4 text-white placeholder-slate-400 focus:outline-none focus:border-teal-400 focus:bg-slate-600" 
+                className="flex-1 bg-slate-700 border border-slate-600 rounded-lg py-2.5 px-3 text-white placeholder-slate-400 focus:outline-none focus:border-teal-400 focus:bg-slate-600 text-sm" 
                 required 
               />
             </div>
@@ -231,7 +231,7 @@ export default function Register() {
               id="terms" 
               checked={agreedToTerms} 
               onChange={(e) => setAgreedToTerms(e.target.checked)} 
-              className="mt-1 w-5 h-5 text-teal-500 bg-slate-700 border-slate-600 rounded focus:ring-teal-500" 
+              className="mt-0.5 w-4 h-4 text-teal-500 bg-slate-700 border-slate-600 rounded focus:ring-teal-500" 
               required 
             />
             <label htmlFor="terms" className="text-sm text-slate-300">
@@ -240,7 +240,7 @@ export default function Register() {
           </div>
 
           {error && (
-            <div className="text-red-400 text-sm bg-red-900 bg-opacity-30 py-3 px-4 rounded-lg border border-red-500 border-opacity-30">
+            <div className="text-red-400 text-sm bg-red-900 bg-opacity-30 py-2 px-3 rounded-lg border border-red-500 border-opacity-30">
               {error}
             </div>
           )}
@@ -248,14 +248,14 @@ export default function Register() {
           <button 
             type="submit" 
             disabled={loading} 
-            className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 disabled:opacity-50 disabled:cursor-not-allowed text-white font-medium py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-slate-800 transform hover:scale-105 transition-all duration-200"
+            className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 disabled:opacity-50 disabled:cursor-not-allowed text-white font-medium py-2.5 px-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-slate-800 transform hover:scale-105 transition-all duration-200 text-sm"
           >
             {loading ? 'CREATING ACCOUNT...' : 'CREATE ACCOUNT'}
           </button>
         </form>
 
-        <div className="text-center mt-8">
-          <p className="text-slate-400">
+        <div className="text-center mt-4">
+          <p className="text-slate-400 text-sm">
             Already have an account?{' '}
             <a href="/login" className="text-teal-400 hover:text-teal-300 cursor-pointer font-medium hover:underline">
               Sign in
