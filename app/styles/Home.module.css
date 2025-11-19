@@ -61,13 +61,13 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: glow 2s ease-in-out infinite alternate;
+  /*animation: glow 2s ease-in-out infinite alternate;*/
   position: relative;
   cursor: pointer;
   margin-top: 50px;
-  transition: all 0.3s ease;
+  /*transition: all 0.3s ease;*/
 }
-
+/*
 .logo::after {
   content: '';
   position: absolute;
@@ -86,7 +86,7 @@
 .logo:hover {
   transform: scale(1.05);
 }
-
+*/
 .nav ul {
   display: flex;
   list-style: none;
@@ -111,13 +111,17 @@
   font-size: 0.9rem;
   padding: 0.4rem 0.8rem;
   border-radius: 20px;
-  transition: all 0.3s ease;
-  overflow: hidden;
+  /*transition: all 0.3s ease;*/
+  /*overflow: hidden;*/
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
-.navList li a::before {
+.navList li a:hover {
+  border-bottom: 2px solid #64b5f6; /* Blue underline */
+}
+
+/*.navList li a::before {
   content: '';
   position: absolute;
   top: 0;
@@ -153,7 +157,7 @@
   transform: translateY(-1px);
   color: #8fbbdc;
   box-shadow: 0 3px 10px rgba(143, 187, 220, 0.2);
-}
+}*/
 
 /* Buttons */
 .bgclr {

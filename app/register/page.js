@@ -208,7 +208,7 @@ export default function Register() {
               <div 
                 onClick={generateCaptcha} 
                 title="Click to refresh captcha" 
-                className="px-3 py-2.5 bg-teal-500 text-slate-900 rounded-lg font-mono font-bold text-lg tracking-wider cursor-pointer hover:bg-teal-400 select-none"
+                className="px-3 py-2.5 bg-teal-500 text-slate-900 rounded-lg font-mono font-bold text-lg tracking-wider cursor-pointer hover:bg-teal-400 select-none text-sm"
               >
                 {captchaCode}
               </div>
