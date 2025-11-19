@@ -146,7 +146,7 @@ export default function CompleteAboutUsPage() {
             </h1>
             <div className="text-4xl md:text-6xl font-bold mb-4">
               <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent float-animation">
-                The Dream Team of
+                The Dream of everybody
               </span>
             </div>
             <div className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent">
