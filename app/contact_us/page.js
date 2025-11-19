@@ -76,7 +76,7 @@ export default function ContactPage() {
         {/* Title */}
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
-            GET IN TOUCH
+            contact us
           </h1>
           <p className="text-blue-200 mt-2 text-sm md:text-base">
             Ready to transform your hiring? Let's connect.
